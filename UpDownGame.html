@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UpDownGame.html</title>
+        <script>
+            var count;
+            var num;
+            var random;
+
+            function GameStart() {
+                num = numbox.num.value;
+                random = parseInt(Math.random() * 100) + 1;
+                if (num > random) {
+                    numbox.src = "./images/down.jpg";
+                } else {
+                    numbox.src = "./images/up.jpg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>업다운게임</h2>
+        <br />
+        <h3>1~100사이의 숫자를 입력하세요</h3>
+
+        <h3>시도횟수:<span id="count" style="font-size: 1.5em;">0회</span></h3>
+        <br />
+        <form name="numbox">
+            숫자입력: <input type="text" name="insert" />
+            <input type="button" name="num" value="획인" onclick="GameStart();" />
+            <br />
+            <input type="image" src="./images/updowngame.jpg" alt="" />
+        </form>
+    </body>
+</html>

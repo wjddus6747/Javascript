@@ -146,7 +146,7 @@
 
         <!-- 가위바위보게임 -->
         <script>
-            function gamestart() {
+            function gamestart(num) {
                 var com = parseInt((Math.random() * 100) / 3 + 1);
                 var user = prompt("");
                 switch (user - com) {
@@ -170,14 +170,14 @@
                 <td>나</td>
             </tr>
             <tr>
-                <td><img name="com" src="./images/start.png" alt="이미지" /></td>
-                <td><img name="user" src="./images/start.png" alt="이미지" /></td>
+                <td><img name="com" src="./images/start.png" width="220" height="220" alt="이미지" /></td>
+                <td><img name="user" src="./images/start.png" width="220" height="220" alt="이미지" /></td>
             </tr>
             <tr>
-                <td colspan="2">?</td>
+                <td colspan="2" id="result">?</td>
             </tr>
         </table>
-        <button>가위</button>
+        <button onclick="gameStart(1);">가위</button>
         <button>바위</button>
         <button>보</button>
     </body>
